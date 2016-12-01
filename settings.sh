@@ -14,12 +14,12 @@ pause
 
 read -e -p "---> Where is your php.ini file?: " -i "$phpini" PHP_FILE
 
-sed -i "s,max_execution_time = 30,max_execution_time = 18000,g" PHP_FILE
+sed -i "s,max_execution_time = 30,max_execution_time = 18000,g" ${PHP_FILE}
 
-sed -i "s,max_input_time = 60,max_input_time = 360,g" PHP_FILE
+sed -i "s,max_input_time = 60,max_input_time = 360,g" ${PHP_FILE}
 
-sed -i "s,zlib.output_compression = Off,zlib.output_compression = on,g" PHP_FILE
+sed -i "s,zlib.output_compression = Off,zlib.output_compression = on,g" ${PHP_FILE}
 
-sed -i "s,upload_max_filesize = 2M,upload_max_filesize = 200M,g" PHP_FILE
+sed -i "s,upload_max_filesize = 2M,upload_max_filesize = 200M,g" ${PHP_FILE}
 
 echo "All done!"
