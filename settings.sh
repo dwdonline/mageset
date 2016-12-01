@@ -26,4 +26,6 @@ sed -i "s,zlib.output_compression = Off,zlib.output_compression = on,g" ${PHP_FI
 
 sed -i "s,upload_max_filesize = 2M,upload_max_filesize = 200M,g" ${PHP_FILE}
 
+service php7.0-fpm restart
+
 echo "All done!"
