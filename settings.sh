@@ -9,10 +9,10 @@ sudo updatedb
 
 phpini=$(locate fpm/php.ini)
 
+read -e -p "---> Where is your php.ini file?: " -i "$phpini" PHP_FILE
+
 echo "---> Now, let's change the settings."
 pause
-
-read -e -p "---> Where is your php.ini file?: " -i "$phpini" PHP_FILE
 
 sed -i "s,max_execution_time = 30,max_execution_time = 18000,g" ${PHP_FILE}
 
